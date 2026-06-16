@@ -21,7 +21,7 @@
 }
 
 .mainPage__millionaireImg {
-  width: max(350px, 25vw);
+  width: min(350px, 80vw);
   aspect-ratio: 1/1;
 }
 
