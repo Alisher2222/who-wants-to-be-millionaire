@@ -12,7 +12,7 @@ import MillionaireImg from "../../assets/millionaireImg.png";
 import { useGame } from "../../customHooks/useGame";
 import { useEffect, useState } from "react";
 import { getCallFriendText } from "../../utils/getCallFriendText";
-import { getBarChartData } from "../../utils/getbarCharData";
+import { getBarChartData } from "../../utils/getBarCharData";
 
 const MainPage = () => {
   const {
