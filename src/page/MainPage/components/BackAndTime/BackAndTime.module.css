@@ -1,0 +1,63 @@
+.BackAndTime {
+  position: absolute;
+  left: 0;
+  top: 50px;
+}
+
+.BackAndTimeWrapper {
+  height: 50px;
+  width: 230px;
+
+  border-radius: var(--border-radius);
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  position: relative;
+
+  background-image: linear-gradient(to right, #9a9ba1, #d8d9dc, #9a9ba1);
+  border: 2px solid #e8eaf3;
+
+  padding-left: 10px;
+}
+
+.timeWrapper {
+  position: absolute;
+  right: 0;
+
+  height: 100%;
+  width: 50%;
+
+  background-image: linear-gradient(
+    to bottom,
+    var(--background-color-black),
+    var(--background-color-blue)
+  );
+
+  border-radius: var(--border-radius);
+  color: var(--color-white);
+  font-weight: 700;
+
+  border: 2px solid rgb(255, 228, 75);
+}
+
+@media (max-width: 760px) {
+  .BackAndTimeWrapper {
+    width: 100vw;
+
+    background-image: none;
+
+    border: none;
+  }
+
+  .timeWrapper {
+    width: fit-content;
+
+    padding-inline: 10px;
+  }
+
+  .icon {
+    display: none;
+  }
+}

@@ -1,0 +1,165 @@
+/* Reset and base styles  */
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Links */
+
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Common */
+
+aside,
+nav,
+footer,
+header,
+section,
+main {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ul,
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+/* Form */
+
+input,
+textarea,
+button,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button,
+input[type="submit"] {
+  display: inline-block;
+  box-shadow: none;
+  background-color: transparent;
+  background: none;
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+legend {
+  display: block;
+}
+
+input[type="file"] {
+  max-width: 100%;
+}
+
+:root {
+  --color-yellow: #e5d091;
+  --color-white: white;
+  --color-orange: #e8a563;
+  --color-black: black;
+
+  --background-color-black: #030d1c;
+  --background-color-blue: #062e58;
+  --background-color-yellow: #facf49;
+
+  --background-color-button-white: #4b5d6c;
+
+  --color-check-sign: #83d45d;
+
+  --border-radius: 50px;
+
+  --gradient-block: linear-gradient(
+    to bottom,
+    var(--background-color-button-white),
+    var(--background-color-black)
+  );
+  --gradient-prize: linear-gradient(
+    to bottom,
+    var(--background-color-yellow),
+    #f38d2a
+  );
+  --gradient-button: linear-gradient(to bottom, #ddac5a, #ddac5a);
+  --gradient-hint: linear-gradient(to bottom, #93b2d0, #1a6195);
+}
+
+body {
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gap {
+  display: flex;
+  gap: 20px;
+}
+
+.container {
+  max-width: 1024px;
+
+  margin-inline: auto;
+
+  padding-inline: 20px;
+}

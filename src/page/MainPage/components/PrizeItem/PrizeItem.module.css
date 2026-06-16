@@ -1,0 +1,21 @@
+.standard {
+  color: var(--color-orange);
+}
+
+.checkpoint {
+  color: var(--color-white);
+}
+
+.current {
+  width: 163px;
+  padding: 2px 10px;
+
+  border-radius: var(--border-radius);
+
+  color: var(--color-black);
+  background-image: var(--gradient-prize);
+}
+
+.current span {
+  color: var(--color-white);
+}

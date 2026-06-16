@@ -1,0 +1,21 @@
+.question {
+  width: 100%;
+
+  color: var(--color-white);
+
+  padding-block: 5px;
+
+  max-width: 600px;
+  min-height: 70px;
+
+  background-image: var(--gradient-block);
+
+  border-radius: var(--border-radius);
+  border: 2px solid var(--color-white);
+}
+
+@media (max-width: 760px) {
+  .question {
+    order: 3;
+  }
+}

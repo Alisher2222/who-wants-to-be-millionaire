@@ -1,0 +1,34 @@
+.mainPage {
+  min-height: 100vh;
+
+  background-image: linear-gradient(
+    135deg,
+    var(--background-color-black),
+    var(--background-color-blue),
+    var(--background-color-black)
+  );
+}
+
+.mainPage__wrapper {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
+  position: relative;
+}
+
+.mainPage__millionaireImg {
+  width: max(350px, 25vw);
+  aspect-ratio: 1/1;
+}
+
+@media (max-width: 760px) {
+  .mainPage__millionaireImg {
+    order: 1;
+
+    padding-top: 50px;
+  }
+}
