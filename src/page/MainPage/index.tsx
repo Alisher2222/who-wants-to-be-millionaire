@@ -6,6 +6,7 @@ import PrizeList from "./components/PrizeList";
 import HintButtons from "./components/HintButtons";
 import BackAndTime from "./components/BackAndTime";
 import ModalWindow from "../../components/ModalWindow";
+import Button from "../../components/Button";
 
 import MillionaireImg from "../../assets/millionaireImg.png";
 
@@ -33,6 +34,9 @@ const MainPage = () => {
     closeAskTheAudience,
     callFriendWindow,
     closeCallFriend,
+    winWindow,
+    closeWinWindow,
+    resetQuiz,
   } = useGame();
 
   const options = currentQuestion.options;
@@ -41,6 +45,7 @@ const MainPage = () => {
 
   useEffect(() => {
     startTimer();
+    changeVolume(0.05);
     playAudio("beginning");
   }, []);
 
@@ -58,8 +63,6 @@ const MainPage = () => {
   useEffect(() => {
     setCallFriendText(getCallFriendText(rightOption));
   }, [currentQuestion]);
-
-  changeVolume(0.2);
 
   return (
     <>
@@ -126,6 +129,17 @@ const MainPage = () => {
               eventDescription="Продолжить игру"
               buttonVariant="modalWindow"
               data={getBarChartData(rightOption)}
+            />
+          )}
+          {winWindow && (
+            <ModalWindow
+              heading="Вы выиграли!"
+              buttonVariant="modalWindow"
+              eventDescription="Перезапустить"
+              event={() => {
+                closeWinWindow();
+                resetQuiz();
+              }}
             />
           )}
         </div>

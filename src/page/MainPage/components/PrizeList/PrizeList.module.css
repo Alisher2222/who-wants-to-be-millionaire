@@ -15,6 +15,10 @@
   border: 2px solid var(--color-white);
 }
 
+.prizeList__resetButton {
+  color: white;
+}
+
 @media (max-width: 760px) {
   .prizeList {
     width: 100%;

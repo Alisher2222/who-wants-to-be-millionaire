@@ -37,7 +37,7 @@
 }
 
 .hint {
-  width: 74px;
+  padding-inline: 10px;
   height: 60px;
 
   display: flex;
@@ -91,6 +91,47 @@ button .disabledButton:hover {
   box-shadow: none;
 }
 
+.createQuiz {
+  width: 80%;
+
+  border: 1px dashed white;
+  border-radius: var(--border-radius);
+
+  color: white;
+
+  padding-block: 20px;
+
+  background-color: #031529;
+
+  transition: background-color 0.1s ease-in;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.createQuiz:hover {
+  background-color: #051b2c !important;
+}
+
+.createQuestion {
+  background-image: var(--gradient-block);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: 700;
+  font-size: 20px;
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.createQuestion:hover {
+  box-shadow: 0 0 20px rgba(253, 221, 71, 0.7);
+
+  transform: translateY(-2px);
+}
 @media (max-width: 760px) {
   .back {
     padding: 10px;

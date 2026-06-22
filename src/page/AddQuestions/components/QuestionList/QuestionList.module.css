@@ -1,0 +1,24 @@
+.questionList {
+  background-color: #052546;
+  padding: 30px 10px;
+
+  border: none;
+  border-radius: 20px;
+
+  text-align: center;
+
+  max-width: 315px;
+}
+
+.QuestionList__list {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.questionList__heading {
+  color: white;
+  text-transform: uppercase;
+
+  padding-bottom: 10px;
+}

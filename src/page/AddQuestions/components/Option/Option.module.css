@@ -1,0 +1,40 @@
+.option {
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 10px 1px;
+  border-radius: 5px;
+}
+
+.option.checked {
+  background-color: #213748;
+}
+
+.option__name {
+  color: white;
+}
+
+.option__checkButton {
+  width: 40px;
+  height: 40px;
+
+  border-radius: 200px;
+  border: 1px solid #506789;
+
+  background-color: #021d3b;
+
+  transition:
+    border 0.1 ease-in,
+    background-color 0.1 ease-in;
+}
+
+.option__checkButton:hover {
+  border: 1px solid white;
+  background-color: #1d3247;
+}
+
+.option__checkButton.checked {
+  background-color: white;
+}

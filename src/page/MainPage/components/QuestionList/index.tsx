@@ -9,8 +9,14 @@ type QuestionListProps = {
 };
 
 const QuestionList = ({ list, rightOption }: QuestionListProps) => {
-  const { openSuccessWindow, openFailureWindow, playAudio, stopTimer } =
-    useGame();
+  const {
+    openSuccessWindow,
+    openFailureWindow,
+    playAudio,
+    stopTimer,
+    openWinWindow,
+    currentPrize,
+  } = useGame();
 
   const rightOptionActions = () => {
     stopTimer();
@@ -24,6 +30,12 @@ const QuestionList = ({ list, rightOption }: QuestionListProps) => {
     playAudio("failure");
   };
 
+  const winActions = () => {
+    openWinWindow();
+    stopTimer();
+    playAudio("correct");
+  };
+
   return (
     <ul className={`${styles.list} container`}>
       {list.map((item) => (
@@ -33,13 +45,15 @@ const QuestionList = ({ list, rightOption }: QuestionListProps) => {
             option={item.option}
             disabled={item.disabled}
             event={
-              item.option === rightOption
-                ? () => {
-                    rightOptionActions();
-                  }
-                : () => {
-                    wrongOptionActions();
-                  }
+              currentPrize === 15
+                ? () => winActions()
+                : item.option === rightOption
+                  ? () => {
+                      rightOptionActions();
+                    }
+                  : () => {
+                      wrongOptionActions();
+                    }
             }
           />
         </li>

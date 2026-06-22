@@ -25,10 +25,30 @@
   aspect-ratio: 1/1;
 }
 
+.mainPage__resetButton {
+  background-image: linear-gradient(to bottom, #465665, #0f1a29);
+
+  width: fit-content;
+
+  padding: 5px 10px;
+
+  border-radius: 20px;
+  border: 1px solid white;
+  color: white;
+
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+
 @media (max-width: 760px) {
   .mainPage__millionaireImg {
     order: 1;
 
     padding-top: 50px;
+  }
+
+  .mainPage__resetButton {
+    order: -1;
   }
 }

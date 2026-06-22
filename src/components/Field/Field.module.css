@@ -1,0 +1,69 @@
+.filterField {
+  width: min(95vw, 300px);
+  border: 1px solid #506789;
+  border-radius: var(--border-radius);
+
+  color: #506789;
+  background-color: #18314e;
+
+  padding: 10px;
+
+  display: flex;
+  align-items: center;
+}
+
+.field__input {
+  width: 100%;
+  height: 100%;
+
+  overflow-x: hidden;
+}
+
+.label {
+  color: white;
+}
+
+.field__icon {
+  margin-right: 20px;
+}
+
+.generalInfoField {
+  width: min(75vw, 300px);
+  padding: 10px;
+
+  color: #506789;
+  background-color: #18314e;
+
+  border: 2px solid #506789;
+  border-radius: 10px;
+
+  color: white;
+}
+
+.questionField {
+  background-color: #18314e;
+
+  width: 250px;
+  height: 100%;
+
+  padding-inline: 10px;
+
+  border: 1px solid #506789;
+  border-radius: 5px;
+
+  color: white;
+}
+
+.questionFieldRight {
+  background-color: #18314e;
+
+  width: 250px;
+  height: 100%;
+
+  padding-inline: 10px;
+
+  border: 1px solid #506789;
+  border-radius: 5px;
+
+  color: white;
+}

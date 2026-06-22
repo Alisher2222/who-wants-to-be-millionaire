@@ -111,7 +111,7 @@ input[type="file"] {
 }
 
 :root {
-  --color-yellow: #e5d091;
+  --color-yellow: #facf49;
   --color-white: white;
   --color-orange: #e8a563;
   --color-black: black;
@@ -162,4 +162,8 @@ body {
   margin-inline: auto;
 
   padding-inline: 20px;
+}
+
+.hide {
+  display: none;
 }

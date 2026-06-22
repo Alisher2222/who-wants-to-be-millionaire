@@ -1,7 +1,13 @@
 import type { IconType } from "react-icons";
 
 export type ButtonOptions = "A" | "B" | "C" | "D";
-export type ButtonVariants = "primary" | "hint" | "back" | "modalWindow";
+export type ButtonVariants =
+  | "primary"
+  | "hint"
+  | "back"
+  | "modalWindow"
+  | "createQuiz"
+  | "createQuestion";
 export type ButtonIconStyles = {
   size: number;
   color: string;
@@ -26,6 +32,7 @@ export type PrizeItemProps = {
 };
 
 export type QuestionType = {
+  index?: number;
   options: ButtonProps[];
   question: string;
   rightOption: ButtonOptions;
@@ -44,6 +51,8 @@ export type LocalStorageType = {
   hintState: (HintType & ButtonProps)[];
   currentPrize: number;
   intervalId?: number;
+  description: string;
+  title: string;
 };
 
 export type LocalStorageKeyType = keyof LocalStorageType;
@@ -75,4 +84,10 @@ export type AudioType =
 export type BarChartType = {
   name: string;
   value: number;
+};
+
+export type QuizCardType = {
+  id: string;
+  title: string;
+  description: string;
 };

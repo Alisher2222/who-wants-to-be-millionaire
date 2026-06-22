@@ -3,6 +3,7 @@ import type {
   LocalStorageKeyType,
   HintType,
   QuestionType,
+  QuizCardType,
 } from "../types";
 
 export const createStorage = (id: string) => {
@@ -73,6 +74,15 @@ export const updateState = <K extends LocalStorageKeyType>(
           data.intervalId = value;
         }
         break;
+      case "description":
+        if (typeof value !== "string") return;
+        data.description = value;
+        break;
+      case "title":
+        if (typeof value !== "string") return;
+        data.title = value;
+        break;
+
       default:
         const check: never = key;
 
@@ -112,4 +122,22 @@ export const getState = <K extends LocalStorageKeyType>(
 
 export const deleteState = (id: string) => {
   localStorage.removeItem(id);
+};
+
+export const getCardData = (): QuizCardType[] => {
+  const array: QuizCardType[] = [];
+
+  for (const key of Object.keys(localStorage)) {
+    const response = localStorage.getItem(key);
+    if (!response) continue;
+
+    const data = JSON.parse(response);
+
+    if (data) {
+      const { title, description } = data;
+      array.push({ id: key, title, description });
+    }
+  }
+
+  return array;
 };

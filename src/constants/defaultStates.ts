@@ -1,5 +1,5 @@
 import type { HintType, ButtonProps } from "../types";
-import { IoIosPeople, IoIosCall } from "react-icons/io";
+import { IoIosCall, IoIosPeople } from "react-icons/io";
 
 export const timeDefault = 30;
 
@@ -14,16 +14,16 @@ export const hintStateDefault: (HintType & ButtonProps)[] = [
   {
     id: "askTheAudience",
     isUsed: false,
-    icon: IoIosPeople,
+    icon: "Помощь зала",
     variant: "hint",
-    iconStyle: { size: 50, color: "#FEDA1E" },
+    iconStyle: { size: 20, color: "#FEDA1E" },
   },
   {
     id: "callFriend",
     isUsed: false,
-    icon: IoIosCall,
+    icon: "звонок другу",
     variant: "hint",
-    iconStyle: { size: 50, color: "#FEDA1E" },
+    iconStyle: { size: 20, color: "#FEDA1E" },
   },
 ];
 
