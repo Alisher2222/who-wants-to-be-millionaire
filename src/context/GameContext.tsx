@@ -135,8 +135,6 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
     startTimer();
   };
 
-  const winQuiz = () => {};
-
   useEffect(() => {
     setCurrentQuestion(questions[currentPrize - 1]);
   }, [currentPrize, questions]);

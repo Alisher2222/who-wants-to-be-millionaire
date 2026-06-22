@@ -1,7 +1,5 @@
 import styles from "./Lobby.module.css";
-import Field from "../../components/Field";
 import Card from "./components/Card";
-import { BiSearch } from "react-icons/bi";
 import Button from "../../components/Button";
 import { useState } from "react";
 import { getCardData } from "../../utils/storage";
@@ -10,7 +8,6 @@ import { useNavigate } from "react-router";
 
 const Lobby = () => {
   const [cardData] = useState(() => getCardData());
-  const [filterText, setFilterText] = useState("");
   const navigate = useNavigate();
 
   return (

@@ -6,7 +6,7 @@ import { secondsToTimeFormat } from "../../../../utils/time";
 import { useNavigate } from "react-router";
 
 const BackAndTime = () => {
-  const { time, resetQuiz } = useGame();
+  const { time } = useGame();
   const navigate = useNavigate();
   return (
     <div className={styles.BackAndTime}>

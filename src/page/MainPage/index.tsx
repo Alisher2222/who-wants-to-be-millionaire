@@ -6,7 +6,6 @@ import PrizeList from "./components/PrizeList";
 import HintButtons from "./components/HintButtons";
 import BackAndTime from "./components/BackAndTime";
 import ModalWindow from "../../components/ModalWindow";
-import Button from "../../components/Button";
 
 import MillionaireImg from "../../assets/millionaireImg.png";
 

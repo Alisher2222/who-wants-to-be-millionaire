@@ -1,5 +1,4 @@
 import type { HintType, ButtonProps } from "../types";
-import { IoIosCall, IoIosPeople } from "react-icons/io";
 
 export const timeDefault = 30;
 
